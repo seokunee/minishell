@@ -45,11 +45,11 @@ LIBFT	= libft
 all:		${NAME}
 
 .c.o:		${SRCS}
-			${CC} $(CFLAGS) -I ${HEAD} -c $^ -o ${^:.c=.o} -I/Users/jihonkim/.brew/opt/readline/include
+			${CC} $(CFLAGS) -I ${HEAD} -c $^ -o ${^:.c=.o} -I ~/goinfre/.brew/opt/readline/include
 
 ${NAME}:	${OBJS}
-			make -C ${LIBFT}/ 
-			$(CC) $(CFLAGS) -I $(HEAD) -o $(NAME) ${OBJS} -L/Users/jihonkim/.brew/opt/readline/lib -lreadline  -L ./libft -lft
+			make -C ${LIBFT}/
+			$(CC) $(CFLAGS) -I $(HEAD) -o $(NAME) ${OBJS} -L ~/goinfre/.brew/opt/readline/lib -lreadline  -L ./libft -lft
 
 clean:
 			make clean -C ${LIBFT}/
